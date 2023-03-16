@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- *main - entry point
- *return: 0 (success)
+ *main - A program that prints charactesr using puts function
+ *Return: 0 (Success)
  */
 int main(void)
 {
