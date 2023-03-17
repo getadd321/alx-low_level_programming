@@ -14,5 +14,6 @@ int main(void)
 		putchar(i < 9 ? ',' : '$');
 		putchar(i < 9 ? ' ' : '\n');
 	}
+	putchar('\n');
 	return (0);
 }
