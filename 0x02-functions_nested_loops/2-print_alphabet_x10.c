@@ -2,7 +2,7 @@
 /**
 * print_alphabet_x10 - prints alphabets in lower-case 10x
 *
-* Return: 0 Always(Success)
+* Return: Always 0 (Success)
 */
 void print_alphabet_x10(void)
 {
@@ -10,9 +10,11 @@ void print_alphabet_x10(void)
 	int j;
 
 	for (i = 0; i < 10; i++)
+	{
 		for (j = 97; j <= 122; j++)
 		{
 			_putchar(j);
 		}
 		_putchar('\n');
+	}
 }
