@@ -6,9 +6,9 @@
 */
 void print_alphabet(void)
 {
-	int c;
+	char c;
 
-	for (c >= 97; c <= 122; c++)
+	for (c >= 'a'; i <= 'z'; z++)
 		_putchar(c);
 	_putchar('\n');
 }
