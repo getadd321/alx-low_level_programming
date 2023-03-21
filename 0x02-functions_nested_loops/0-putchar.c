@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-*main - Entry point
-*Description - print _putchar
-*Return: Always 0
-*/
+* main - Entry point
+* Description: prints _putchar
+* Return: 0 Always
+ */
 int main(void)
 {
 	_putchar('_');
