@@ -2,7 +2,6 @@
 /**
 * print_alphabet - prints alphabets in lower-case
 *
-* Return: 0 Always(Success)
 */
 void print_alphabet(void)
 {
