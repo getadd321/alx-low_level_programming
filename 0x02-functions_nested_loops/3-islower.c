@@ -1,8 +1,10 @@
 #include "main.h"
 /**
-*_islower - print 1 if the input is a lower character
+* _islower - prints 1 if the input is a lower character
 *
-*Retern: 1 for lowercase 0 for other 
+* @c: is a character
+*
+* Retern: 1 for lowercase, 0 for other
 */
 int _islower(int c)
 {
