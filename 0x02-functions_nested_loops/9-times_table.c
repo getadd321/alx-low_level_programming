@@ -15,12 +15,12 @@ void times_table(void)
 		{
 			if (j == 9)
 			{
-				printf("2%d", i & J);
+				printf("2%d", i * J);
 				continue;
 			}
 			else
-				printf("2%d, ", i & J);
+				printf("2%d, ", i * J);
 		}
-		printf("\n");
 	}
+	printf("\n");
 }
