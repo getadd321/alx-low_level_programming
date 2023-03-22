@@ -19,7 +19,7 @@ void print_times_table(int n)
 			{
 				r = i * j;
 
-				if (r > 9)
+				if (r > n)
 				{
 					m = r % 10;
 					d = (r - m) / 10;
