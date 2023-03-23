@@ -23,6 +23,10 @@ int main(void)
 		{
 			printf(" FizzBuzz");
 		}
+		else if
+		{
+			printf(" %d", i);
+		}
 		else
 		{
 			printf(" %d", i);
