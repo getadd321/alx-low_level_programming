@@ -13,6 +13,7 @@ void print_line(int n)
 		_putchar('\n')
 	}
 	else
+	{
 		int j;
 
 		for (j = 0; j < n; j++)
@@ -20,4 +21,5 @@ void print_line(int n)
 			_putchar('_');
 		}
 		_putchar('\n')
+	}
 }
