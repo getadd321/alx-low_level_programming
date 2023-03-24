@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 /**
  * main -Entry point
  *
@@ -6,22 +7,15 @@
  */
 int main(void)
 {
-	long num = 612852475143;
-	int  i;
+	long long int i, n = 612852475143;
 
-	while (i++ < num / 2)
+	for (i = 3; i <= sqrt(n); i += 2)
 	{
-		if (num % i == 0)
+		while ((n % i == 0) && (n != i))
 		{
-			num /= factor;
-			continue;
-		}
-		for (i = 3 ; i < num / 2; i += 2)
-		{
-			if (num % i == 0)
-				num /= i;
+			n /= i;
 		}
 	}
-	printf("%ld\n", num);
+	printf("%lld", n);
 	return (0);
 }
