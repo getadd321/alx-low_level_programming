@@ -6,28 +6,19 @@
  */
 int main(void)
 {
-	long long int n = 612852475143;
-	long long int i, max_prime_factor;
+	long long num = 612852475143;
+	long long factor = 2;
 
-	while (n % 2 == 0)
+	while (num > factor)
 	{
-		n = n / 2;
-		max_prime_factor = 2;
-
-	}
-
-	for (i = 3; i * i <= n; i += 2)
-	{
-		while (n % i == 0)
+		if (num % factor == 0)
 		{
-			n = n / i;
-			max_prime_factor = i;
+			num /= factor;
+			factor--;
 		}
+		factor++;
+
 	}
-	if (n > 2)
-	{
-		max_prime_factor = n;
-	}
-	printf("%lld\n", max_prime_factor);
+	printf("%lld\n", factor);
 	return (0);
 }
