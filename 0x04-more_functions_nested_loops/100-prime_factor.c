@@ -7,7 +7,7 @@
 int main(void)
 {
 	long num = 612852475143;
-	int  i = 1;
+	int  i;
 
 	while (i++ < num / 2)
 	{
