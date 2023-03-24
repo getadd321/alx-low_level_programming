@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	long long int i, n = 612852475143;
+	unsigned long int i, n = 612852475143;
 
 	for (i = 3; i <= sqrt(n); i += 2)
 	{
@@ -16,6 +16,6 @@ int main(void)
 			n /= i;
 		}
 	}
-	printf("%lld", n);
+	printf("%lu", n);
 	return (0);
 }
