@@ -4,7 +4,7 @@
  *
  *@s: the input string
  *
- * Return: nothing
+ * Return: 0
  */
 void print_rev(char *s)
 {
@@ -13,8 +13,8 @@ void print_rev(char *s)
 
 	while (*s != '\0')
 	{
-		*s++;
 		s_len++;
+		s++;
 	}
 	s--;
 	for (c = s_len; c > 0; c--)
