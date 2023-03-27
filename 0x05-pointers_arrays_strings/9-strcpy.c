@@ -8,9 +8,9 @@
  *
  * Return: dest
  */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int i;
 	int l = 0;
 
 	while (*(src + l) != '\0')
@@ -18,7 +18,7 @@ char *_strcpy(char *dest, char *src);
 		l++;
 	}
 
-	for ( ; i < l; i++)
+	for (i = 0; i < l; i++)
 	{
 		dest[i] = src[i];
 	}
