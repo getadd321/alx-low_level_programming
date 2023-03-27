@@ -18,11 +18,11 @@ void puts_half(char *str)
 		s++;
 		s_len++;
 	}
-	if(s_len % 2 == 0)
+	if (s_len % 2 == 0)
 	{
 		n = s_len / 2;
 	}
-	n = (s_len -1) / 2;
+	n = (s_len - 1) / 2;
 
 	for (i = n; i < s_len; i++)
 	{
