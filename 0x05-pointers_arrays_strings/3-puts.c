@@ -1,7 +1,7 @@
 /**
  * _puts - prints string to stdout
  *
- *@str:input string
+ *@str: the input string
  *
  * Return: nothing
  */
