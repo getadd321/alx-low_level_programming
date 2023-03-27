@@ -6,7 +6,7 @@
  *@dest: destination
  *@src: source
  *
- * Return: des
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src);
 {
@@ -20,8 +20,8 @@ char *_strcpy(char *dest, char *src);
 
 	for (i = 0; i < l; i++)
 	{
-		des[i] = src[i];
+		dest[i] = src[i];
 	}
-	des[l] = '\0';
-	return (des);
+	dest[l] = '\0';
+	return (dest);
 }
