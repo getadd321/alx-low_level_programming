@@ -1,9 +1,9 @@
 /**
- * _puts - checks the length of string
+ * _puts - prints string to stdout
  *
  *@str:input string
  *
- * Return: lenght
+ * Return: nothing
  */
 void _puts(char *str)
 {
