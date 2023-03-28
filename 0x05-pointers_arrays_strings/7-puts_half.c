@@ -1,7 +1,4 @@
 #include "main.h"
-#include <string.h>
-#include <stddef.h>
-#include <stdio.h>
 /**
  * puts_half - prints half of string to stdout
  *
@@ -11,13 +8,16 @@
  */
 void puts_half(char *str)
 {
-	size_t s_len = 0;
+	int s_len = 0;
 	int i;
-	int n;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*str)
 	{
 		s_len++;
+		str++;
+	}
+	for (i = 0; i < s_len; i++)
+	{
 		str--;
 	}
 	if ((s_len % 2) == 0)
@@ -28,7 +28,7 @@ void puts_half(char *str)
 	{
 		n = (s_len - 1) / 2;
 	}
-	for (i = n; str[i] != '\0'; i++)
+	for (i = n; i < s_len; i++)
 	{
 		_putchar(str[i]);
 	}
