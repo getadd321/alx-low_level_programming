@@ -4,7 +4,7 @@
  *
  *@s: the input string
  *
- * Return: 0
+ * Return: nothingi
  */
 void print_rev(char *s)
 {
@@ -22,5 +22,5 @@ void print_rev(char *s)
 		_putchar(*s);
 		s--;
 	}
-	_putcahr('\n');
+	_putchar('\n');
 }
