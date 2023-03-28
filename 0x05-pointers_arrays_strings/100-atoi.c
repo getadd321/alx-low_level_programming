@@ -25,13 +25,13 @@ int _atoi(char *s)
 		else if (*s >= '0' && *s <= '9')
 		{
 			digit = *s - '0';
-			result = result * 10 + digit * sign;
+			result = result * 10 + digit;
 		}
-		else
+		else if (result != 0)
 		{
 			break;
 		}
 		s++;
 	}
-	return (result);
+	return (result * sign);
 }
