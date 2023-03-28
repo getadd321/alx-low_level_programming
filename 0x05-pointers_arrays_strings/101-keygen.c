@@ -14,7 +14,7 @@ int main(void)
 	int i;
 	char password[p_len + 1];
 	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+{}[]<>?,./";
-	int charset_size = sizeof(charset) - 1;
+	int charset_size = sizeof(charset);
 	
 	srand(time(NULL));
 	
