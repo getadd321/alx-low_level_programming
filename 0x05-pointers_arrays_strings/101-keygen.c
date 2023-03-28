@@ -10,19 +10,26 @@
  **/
 int main(void)
 {
-	int p_len = 8;
-	int i;
-	char password[p_len + 1];
-	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+{}[]<>?,./";
-	int charset_size = sizeof(charset);
-	
+	const int PASSWORD_LENGTH = 100;
+	const int PASSWORD_SUM_CONSTRAINT = 2772;
+	const char CHARSET[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+{}[]|;:<>,.?/";
+	const int CHARSET_SIZE = sizeof(CHARSET) - 1; 
+	int pass[PASSWORD_LENGTH];
+	int i, sum = 0, n;
 	srand(time(NULL));
-	
-	for (i = 0; i < p_len; i++)
+	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
-		password[i] = charset[rand() % charset_size];
+		pass[i] = rand() % CHARSET_SIZE;
+		sum += (pass[i] + '0');
+		putchar(CHARSET[pass[i]]);
+		if ((PASSWORD_SUM_CONSTRAINT - sum) - '0' < CHARSET_SIZE)
+		{
+			n = PASSWORD_SUM_CONSTRAINT - sum - '0';
+			sum += n;
+			putchar(CHARSET[n]);
+			break;
+		}
 	}
-	password[p_len] = '\0';
-	printf("%s", password);
-	return (0);
+	return 0;
 }
+
