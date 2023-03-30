@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*_strncmp - compares two strings
+*_strcmp - compares two strings
 *
 *@s1: string one
 *
@@ -20,4 +20,4 @@ int _strcmp(char *s1, char *s2)
 		}
 		i++;
 	}
-	return ((int)(s1[i] - s2[i]));
+	return (s1[i] - s2[i]);
