@@ -25,7 +25,7 @@ char *leet(char *str)
 		{
 			*ptr = char_encoder[*ptr - 'A'];
 		}
-	 ptr++;
+	ptr++;
 	}
 	return (str);
 }
