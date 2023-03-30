@@ -22,11 +22,7 @@ char *cap_string(char *str)
 		is_new_word = (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ',' ||
 				*ptr == ';' || *ptr == '.' || *ptr == '!' || *ptr == '?' ||
 				*ptr == '"' || *ptr == '(' || *ptr == ')' || *ptr == '{' || *ptr == '}');
-		if (*ptr == '\t')
-		{
-			*ptr = ' ';
-		}
-	ptr++;
+		ptr++;
 	}
 	return (str);
 }
