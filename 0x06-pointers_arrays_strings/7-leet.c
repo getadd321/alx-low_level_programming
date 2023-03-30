@@ -11,7 +11,7 @@
 char *leet(char *str)
 {
 	char code1[] = "aAeEoOtTlL";
-	char code2[] = "4433007711"
+	char code2[] = "4433007711";
 
 	int i, j;
 
