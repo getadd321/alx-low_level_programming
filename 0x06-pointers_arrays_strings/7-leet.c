@@ -10,7 +10,6 @@
 **/
 char *leet(char *str)
 {
-	char *ptr = str;
 	char code1[] = "aAeEoOtTlL";
 	char code2[] = "4433007711"
 
