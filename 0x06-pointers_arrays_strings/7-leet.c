@@ -11,18 +11,26 @@
 char *leet(char *str)
 {
 	char *ptr = str;
-	char char_encoder[26] = {'4', 'b', 'c', 'd', '3', 'f', '6', 'h', 'i'
-		, 'j', 'k', '1', 'm', 'n', '0', 'p', 'q'
-			, 'r', 's', '7', 'u', 'v', 'w', 'x', 'y', 'z'};
+	char char_encoder[26][2] = {{'a', '4'}, {'b', 'b'}, {'c', 'c'}
+		, {'d', 'd'}, {'e', '3'}, {'f', 'f'}, {'g', '6'}
+		, {'h', 'h'}, {'i', 'i'}, {'j', 'j'}, {'k', 'k'}
+		, {'l', '1'}, {'m', 'm'}, {'n', 'n'}, {'o', '0'}
+		, {'p', 'p'}, {'q', 'q'}, {'r', 'r'}, {'s', 's'}
+		, {'t', '7'}, {'u', 'u'}, {'v', 'v'}, {'w', 'w'}
+		, {'x', 'x'}, {'y', 'y'}, {'z', 'z'}};
 
-	while (*ptr != '\0')
+	int i, j;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (*ptr >= 'a' && *ptr <= 'z')
+		for (j = 0; j < 26; j++)
 		{
-			*ptr = char_encoder[*ptr - 'a'];
+			if (str[i] == char_encoder[j][0] || str[i] == char_encoder[j][0] - 32)
+			{
+				str[i] = char_encoder[j][1];
+				break;
+			}
 		}
-		*ptr = char_encoder[*ptr - 'A'];
-	ptr++;
 	}
 	return (str);
 }
