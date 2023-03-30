@@ -21,10 +21,7 @@ char *leet(char *str)
 		{
 			*ptr = char_encoder[*ptr - 'a'];
 		}
-		else if (*ptr >= 'A' && *ptr <= 'Z')
-		{
-			*ptr = char_encoder[*ptr - 'A'];
-		}
+		*ptr = char_encoder[*ptr - 'A'];
 	ptr++;
 	}
 	return (str);
