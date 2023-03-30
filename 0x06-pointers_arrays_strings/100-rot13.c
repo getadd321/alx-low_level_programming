@@ -22,6 +22,7 @@ char *rot13(char *str)
 			if (str[i] == code_in[j])
 			{
 				str[i] = code_rot[j];
+				break;
 			}
 		}
 	}
