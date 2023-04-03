@@ -1,11 +1,12 @@
 #include "main.h"
+#include<stdio.h>
 /**
  * print_diagsums -  prints the sum of the two diagonals
  * @a: points to array of integer
  * @size: size of the array input
  * Return: Nothing
  **/
-void print_diagsums(int *a, int size);
+void print_diagsums(int *a, int size)
 {
 	int i;
 	int sum1 = 0;
