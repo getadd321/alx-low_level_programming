@@ -1,5 +1,5 @@
 #include "main.h"
-int _sqrt_finder(int n, int l, int h);
+int _sqrt_finder(int n, int m);
 /**
 *_sqrt_recursion - returns the natural square root of a number
 *
@@ -16,37 +16,26 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (_sqrt_finder(n, 0, n));
+		return (_sqrt_finder(n, 0));
 	}
 }
 /**
 *_sqrt_finder - helps to find sqrt of n
 *
 *@n: input integer num
-*@l: low interval of input
-*@h: high interval of input
+*@m: low interval of input
 *
 *Return: the square root of n
 **/
-int _sqrt_finder(int n, int l, int h)
+int _sqrt_finder(int n, int m)
 {
-	if (l > h)
+	if (m * m > n)
 	{
 		return (-1);
 	}
-	else
+	else if (m * m == n)
 	{
-		int mid = (l + h) / 2;
-		int mid_square = mid * mid;
-
-		if (mid_square == n)
-		{
-			return (mid);
-		}
-		else if (mid_square > n)
-		{
-			return (_sqrt_finder(n, l, mid - 1));
-		}
-		return (_sqrt_finder(n, mid + 1, h));
+		return (m);
 	}
+	return (_sqrt_finder(n, m + 1));
 }
