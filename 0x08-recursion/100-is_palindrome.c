@@ -39,7 +39,7 @@ int _strlen_recursion(char *s)
 }
 
 /**
-*palindrome_finder - helps to find palindrome string
+*_palindrome_finder - helps to find palindrome string
 *@s:pointer to string input
 *@start: start of string input
 *@end: end of strig input
