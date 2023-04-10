@@ -7,22 +7,22 @@
  * @str: pointer to input string
  * Return: pointer to copy of the string null other wise.
  */
-char char *_strdup(char *str)
+char *_strdup(char *str)
 {
 	char *str_cpy;
-	int len = 0, i;
+	int len = 0;
+	int i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	while (str != '\0')
+	while (str[len] != '\0')
 	{
 		len++;
-		str++;
 	}
-	str_cpy = malloc(sizeof(char) * len) + 1);
+	str_cpy = (char *) malloc(len + 1);
 	if (str_cpy == NULL)
 	{
 		return (NULL);
