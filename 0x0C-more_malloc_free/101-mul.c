@@ -3,25 +3,25 @@
 #include "main.h"
 /**
  * _isdigit - checks if the input is a digit
- * @c: The input
+ * @s: The input
  * Return: 1 if digit, 0 otherwise.
  */
 int _isdigit(char *s)
 {
 	int i = 0;
-	
+
 	while (s[i])
 	{
 		if (s[i] < '0' || s[i] > '9')
 			return (0);
 		i++;
-	} 
+	}
 	return (1);
 }
 /**
  * str_len - checks string length
  * @s: input string
- * Return : string length
+ * Return: length of the input
  */
 int str_len(char *s)
 {
