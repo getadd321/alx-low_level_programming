@@ -4,15 +4,14 @@
 *init_dog - initialize a variable of type struct dog
 *
 * @d: pointer to struct dog
-* @name: pointer name of the dog string
-* @age: age of the dog
-* @owner: pointer to the name of the owner of the dog
-* Return : nothing
+* @name: pointer to name of the dog to initialize
+* @age: age of the dog to initialize
+* @owner: pointer to the name of the owner to initialize
 **/
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
-		d = malloc (sizeof(struct dog));
+		d = malloc(sizeof(struct dog));
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
