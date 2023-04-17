@@ -18,21 +18,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 		len_owner++;
 	ndog = malloc(sizeof(struct dog));
 	if (ndog == NULL)
-	{
-		free(ndog);
 		return (NULL);
-	}
 	ndog->name = malloc(sizeof(char) * (len_name + 1));
 	if (ndog->name == NULL)
 	{
-		free(ndog->name);
 		free(ndog);
 		return (NULL);
 	}
 	ndog->owner = malloc(sizeof(char) * (len_owner + 1));
 	if (ndog->owner == NULL)
 	{
-		free(ndog->owner);
 		free(ndog->name);
 		free(ndog);
 		return (NULL);
