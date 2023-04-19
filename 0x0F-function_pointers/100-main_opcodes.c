@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int num_bytes, i;
-	unsigned char *opcodes;
+	char *opcodes;
 
 	if (argc != 2)
 	{
@@ -23,14 +23,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	opcodes = (unsigned char *)main;
+	opcodes = (char *)main;
 	for (i = 0; i < num_bytes; i++)
 	{
 		if (i == num_bytes - 1)
 		{
-			printf("%02x\n", opcodes[i]);
+			printf("%02hhx\n", opcodes[i]);
 		}
-		 printf("%02x ", opcodes[i]);
+		 printf("%02hhx ", opcodes[i]);
 	}
 	return (0);
 }
