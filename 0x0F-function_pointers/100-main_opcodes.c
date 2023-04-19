@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 		if (i == num_bytes - 1)
 		{
 			printf("%02hhx\n", opcodes[i]);
+			break;
 		}
 		 printf("%02hhx ", opcodes[i]);
 	}
