@@ -1,48 +1,48 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdbool.h>
 /**
 * print_all- prints anything
-*
 * @format: list of types of arguments passed to the function
-*
 * Return: nothing
 **/
 void print_all(const char * const format, ...)
 {
-	const char *p = format;
-	char c, *s;
-	int i;
-	float f;
+	int j = 0;
+	char *str;
+	bool test;
 	va_list arg_list;
 
 	va_start(arg_list, format);
-
-	while (*p != '\0')
+	while (format[j] != '\0')
 	{
-		switch (*p)
+		switch (format[j])
 		{
 			case 'c':
-				c = (char)va_arg(arg_list, int);
-				printf("%c, ", c);
+				printf("%c", va_arg(arg_list, int));
 				break;
 			case 'i':
-				i = va_arg(arg_list, int);
-				printf("%d, ", i);
+				printf("%d", va_arg(arg_list, int));
 				break;
 			case 'f':
-				f = (float)va_arg(arg_list, double);
-				printf("%f, ", f);
+				printf("%f", va_arg(arg_list, double));
 				break;
 			case 's':
-				s = va_arg(arg_list, char*);
-				if (s == NULL)
-					printf("(nil)");
+				str = va_arg(arg_list, char*);
+				if (str != NULL)
+					printf("%s", str);
 				else
-					printf("%s", s);
+					printf("(nil)");
+				break;
+			default:
 				break;
 		}
-		p++;
+		j++;
+		test = format[j] == 'c' || format[j] == 'i' ||
+			format[j] == 'f' || format[j] == 's';
+		if (format[j] != '\0' && test)
+			printf(", ");
 	}
 	printf("\n");
 	va_end(arg_list);
