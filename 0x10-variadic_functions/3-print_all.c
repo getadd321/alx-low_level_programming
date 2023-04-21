@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdbool.h>
 /**
 * print_all- prints anything
 * @format: list of types of arguments passed to the function
@@ -11,7 +10,6 @@ void print_all(const char * const format, ...)
 {
 	int j = 0;
 	char *str;
-	bool test;
 	va_list arg_list;
 
 	va_start(arg_list, format);
@@ -36,12 +34,11 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 				break;
 			default:
-				break;
+				j++;
+				continue;
 		}
 		j++;
-		test = format[j] == 'c' || format[j] == 'i' ||
-			format[j] == 'f' || format[j] == 's';
-		if (format[j] != '\0' && test)
+		if (format[j] != '\0')
 			printf(", ");
 	}
 	printf("\n");
